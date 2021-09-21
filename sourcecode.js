@@ -1,3 +1,10 @@
+// 1. A junior developer structure student name, skills and score in array of arrays which may not easy to read. Destruction the following array name to name, skills array to skills, scores array to scores, JavaScript score to jsScore and React score to reactScore variable.
+const student = ["David", ["HTM", "CSS", "JS", "React"], [98, 85, 90, 95]];
+const [name, skills, scores] = student;
+const [, , jsScore, reactScore] = student[2];
+console.log(name, skills, scores);
+console.log(jsScore, reactScore);
+
 // 1.A.Write a function called convertArrayToObject which can convert the array to a structured object.
 const students = [
   ["David", ["HTM", "CSS", "JS", "React"], [98, 85, 90, 95]],
