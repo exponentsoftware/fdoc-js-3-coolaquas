@@ -196,17 +196,15 @@ console.log(
 );
 
 //2.b.a) Create a function called ***rateProduct*** which rates the product
-const totalrateProduct = () =>
-  products.map((prod) =>
-    console.log({
-      Name: prod.name,
-      rate:
-        prod.ratings.length === 0
-          ? 0
-          : prod.ratings.reduce((prev, cur) => prev + cur.rate, 0),
-    })
-  );
-totalrateProduct();
+const rateProduct = (prodName, ob) => {
+  for (let key in products) {
+    if (products[key].name == prodName) {
+      products[key].ratings.push(ob);
+      console.log("products", products[key]);
+    }
+  }
+};
+rateProduct("mobile phone", { userId: "12345", rate: 5 });
 
 //2.b.b) Create a function called ***averageRating*** which calculate the average rating of a product
 const avaragerateofProduct = (prodName) => {
